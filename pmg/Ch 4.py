@@ -120,7 +120,18 @@ for j in range(size):
     for i in range(size + 1):
         print("|", end="  ")
     print("\n")
-
+    
+#17
+for i in range(10):
+    if i%3==0 and i%5==0:
+        print("fizzbuzz")
+    elif i%3==0:
+        print("fizz")
+    elif i%5==0:
+        print("buzz")
+    else:
+        print("*")
+        
 #18.
 import turtle
 import random
