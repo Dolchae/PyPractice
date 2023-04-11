@@ -120,6 +120,21 @@ for j in range(size):
     for i in range(size + 1):
         print("|", end="  ")
     print("\n")
+
+#18.
+import turtle
+import random
+t = turtle.Turtle()
+t.shape("turtle")
+for i in range(10):
+    x = random.randint(-350,350)
+    y = random.randint(-350,350)
+    r = random.randint(1, 100)
+    t.up()
+    t.goto(x,y)
+    t.down()
+    t.circle(r)
+turtle.mainloop()
 '''
 
 
