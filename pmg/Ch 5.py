@@ -1,4 +1,6 @@
 '''
+
+
 #03
 def calc(x,y):
     a = x+y
@@ -6,12 +8,11 @@ def calc(x,y):
     c = x*y
     d = x/y
     return a,b,c,d
-
 x = int(input("첫 번째 정수를 입력하시오: "))
 y = int(input("두 번째 정수를 입력하시오: "))
 ans = calc(x,y)
-print(f"{ans}이 반환되었습니다.")
-
+a,b,c,d = ans
+print(f"{a} {b} {c} {d}이 반환되었습니다.")
 
 #06.
 import random
