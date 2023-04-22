@@ -24,6 +24,37 @@ turtle.mainloop()
 turtle.bye()
 '
 
-#12
-aList = [[['#' for i in range(4)] for j in range(3)] for k in range(5)]
-print(aList)
+
+#12        
+
+
+#13
+import random
+
+alist = [['.' for _ in range(10)] for _ in range(10)]
+
+for i in range(10):
+    for j in range(10):
+        n = random.random()
+        if n < 0.3:
+            alist[i][j] = '#'
+
+for i in range(10):
+    print(*alist[i])
+
+#16
+s = []
+for i in range(2,101):
+    s.append(i)
+
+for i in range(2,101):
+    if i>=len(s):
+        break
+    for j in range(i,101):
+        if j>=len(s):
+            break
+        if s[j]%i == 0:
+            s.pop(j)
+
+print(s)
+
