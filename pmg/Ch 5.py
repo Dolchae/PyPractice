@@ -85,3 +85,65 @@ for i in range(0,220,20):
 turtle.mainloop()
 turtle.bye()
 '''
+
+
+#01.
+def get_peri(r=5.0):
+    print(3.14*2*r)
+
+get_peri()
+
+#05.
+def checkPass(p):
+    s,l,d = 0,0,0
+    for i in p:
+        if i.isupper()==True:
+            s = 1
+        if i.islower()==True:
+            l = 1
+        if i.isdigit()==True:
+            d = 1
+    if s==True and d==True and l==True:
+        print("완료")
+    else:
+        print("다시 만드시오")
+
+checkPass('asdkD8')
+
+
+#09.
+a = int(input())
+b = int(input())
+
+for i in range(min(a,b),0,-1):
+    if a%i==0 and b%i==0:
+        print(i)
+        break
+
+#11.
+def deci2bin(n):
+    alist = []
+    i=n
+    while(i>=1):
+        if i%2==0:
+            alist.append(0)
+        else:
+            alist.append(1)
+        i = i//2
+
+    for i in range(len(alist)-1,-1,-1):
+        print(alist[i],end="")
+
+n = int(input("10진수"))
+deci2bin(n)
+
+import turtle
+
+
+#16.
+def draw_line():
+    turtle.forward(100)
+    turtle.backward(100)
+for i in range(10):
+    draw_line()
+    turtle.right(36)
