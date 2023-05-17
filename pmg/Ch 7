@@ -1,0 +1,127 @@
+'''
+#01
+alist = list(input().split())
+print("주어진 리스트:",alist)
+b_set = set(alist)
+alist = list(b_set)
+alist.sort()
+print("정리된 리스트:",alist)
+
+#02.
+dic = {x:x*x for x in range(1,11)}
+print(dic)
+
+#03.
+d = {"Apple":1, "Banana":2, "Grape":3}
+for key, value in d.items():
+    print(key,"->",value,end=" ")
+
+
+#04
+d = {1:10, 2:20, 3:30, 4:40, 5:50, 6:60}
+key = int(input("키를 입력하십시오: "))
+if key in d:
+    print(f"키 {key}은 딕셔너리에 있습니다.")
+else:
+    print(f"키 {key}은 딕셔너리에 없습니다.")
+
+
+#05.
+myDict = {"옷":100,"컴퓨터":2000,"모니터":320}
+print("총합계 =",sum(myDict.values()))
+
+
+#06.
+colors = ["red","green","blue"]
+values = {"#FF0000","#00800","#0000FF"}
+dic = {key : value for key,value in zip(colors,values)}
+print(dic)
+
+
+#07
+schedule_dic = {}
+
+while True:
+    date = input("날짜를 입력하시오: ")
+    if date=="0":
+        break
+    content = input("일정을 입력하시오: ")
+    if date not in schedule_dic:
+        schedule_dic[date] = []
+    schedule_dic[date].append(content)
+    print(schedule_dic)
+
+print(schedule_dic)
+
+
+#08.
+dic = {1:"January",2:"Feburary",3:"March",4:"April",5:"May",6:"June",7:"July",8:"Agust",9:"September",10:"October",11:"November",12:"December"}
+while True:
+    key = int(input("달의 번호: "))
+    if key == 0:
+        break
+    print("달의 이름:",dic[key])
+
+#09.
+a = input("첫 번째 문자열: ")
+b = input("두 번째 문자열: ")
+a = set(a)
+b = set(b)
+c = a&b
+c = list(c)
+for i in range(len(c)):
+    print(c[i],end=" ")
+
+#10.
+set1 = {10,20,30,40,50,60}
+set2 = {30,40,50,60,70,80}
+set3 = set1&set2
+set4 = set1-set3
+set4.update(set2-set3)
+print("어느 한쪽에만 있는 요소들",set4)
+
+
+#11.
+problems = {"파이썬": "최근에 가장 떠오르는 프로그래밍 언어", "변수":"데이터를 저장하는 메모리 공간", "함수":"작업을 수행하는 문장들의 집합에 이름을 붙인 것",
+            "리스트":"서로 관련이 없는 항목들의 모임"}
+
+for word,Q in zip(problems.keys(),problems.values()):
+    print("다음은 어떤 단어에 대한 설명일까요?")
+    print(Q)
+    print("(1)파이썬 (2)변수 (3)함수 (4)리스트")
+    ans = input()
+    if word == ans:
+        print("정답입니다. !")
+    else:
+        print("틀렸습니다.")
+
+
+#12.
+s = input("문자열을 입력하시오: ")
+n = input("금칙어를 입력하시오: ")
+n1 = n.split()
+print(n1)
+for word in n1:
+    s = s.replace(word, "*"*len(word))
+
+print(s)
+
+
+#13.
+s = input()
+n_letters = sum(1 for x in s if x.isalpha())
+n_digits = sum(1 for x in s if x.isdigit())
+
+print(f'{{"LETTERS":{n_letters}, "DIGITS": {n_digits}}}')
+
+
+#14. ????
+s = input()
+s1 = s.join(s.split("/"))
+print(s,"->",s1)
+'''
+
+#15.
+studentList = {"Park": "Korea", "Sam":"USA", "Sakura":"Japan"}
+for word in studentList.keys():
+    print(f"\"Hi! I'm {word}, and I'm from {studentList[word]}\"")
